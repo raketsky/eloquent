@@ -1,0 +1,16 @@
+{
+	"name": "raketsky/eloquent",
+	"type": "library",
+	"license": "BSD",
+	"require": {
+		"davedevelopment/phpmig": "~1",
+		"illuminate/database": "^5.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"MindFly\\Database\\": "src"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}

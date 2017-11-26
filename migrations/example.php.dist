@@ -1,0 +1,39 @@
+<?php
+use Illuminate\Database\Schema\Blueprint;
+use Jirassy\Database\Migration;
+
+class Example extends Migration
+{
+	protected $table;
+
+	public function init()
+    {
+        $this->table = 'processor';
+        parent::init();
+    }
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $this->schema->create($this->table, function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('tag');
+            $table->timestamps();
+            $table->index('tag');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        $this->schema->dropIfExists($this->table);
+    }
+}
