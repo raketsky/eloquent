@@ -1,23 +1,15 @@
 <?php
 use Illuminate\Database\Schema\Blueprint;
-use Jirassy\Database\Migration;
+use Egosun\Database\Migration;
 
+/**
+ * File should have name YYYYMMDDHHMMSS_CreateTestTable.php
+ */
 class Example extends Migration
 {
-	protected $table;
+	private string $table = 'test';
 
-	public function init()
-    {
-        $this->table = 'processor';
-        parent::init();
-    }
-
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
+    public function up(): void
     {
         $this->schema->create($this->table, function (Blueprint $table) {
             $table->increments('id');
@@ -27,12 +19,7 @@ class Example extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
+    public function down(): void
     {
         $this->schema->dropIfExists($this->table);
     }

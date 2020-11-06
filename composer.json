@@ -1,14 +1,16 @@
 {
-	"name": "raketsky/eloquent",
+	"name": "egosun/eloquent",
+	"description": "Eloquent and migration library",
 	"type": "library",
-	"license": "BSD",
+	"license": "MIT",
 	"require": {
-		"davedevelopment/phpmig": "~1",
-		"illuminate/database": "^5.2"
+		"php": "^7.4",
+		"davedevelopment/phpmig": "^v1.7",
+		"illuminate/database": "^v8.13"
 	},
 	"autoload": {
 		"psr-4": {
-			"MindFly\\Database\\": "src"
+			"Egosun\\Database\\": "src"
 		}
 	},
 	"minimum-stability": "dev",
